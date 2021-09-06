@@ -1,0 +1,25 @@
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+    ServerAdmin info@vudinhquang.info
+    DocumentRoot /var/www/html/vudinhquang
+    ServerName coderworking.com
+    <Directory "/var/www/html/vudinhquang">      
+    Order deny,allow
+        Allow from all
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@quangvu.info
+    DocumentRoot /var/www/html/quangvu
+    ServerName quangvu.info
+    <Directory "/var/www/html/quangvu">      
+   Order deny,allow
+           Allow from all
+           AllowOverride All
+          Require all granted
+   </Directory>
+</VirtualHost>

@@ -4,4 +4,4 @@ Create Users & Groups
 Install and configure web server Apache
     Tạo và phân quyền thư mục cho webserver 
 Install PHP
-    
+MySQL Install And Configuration

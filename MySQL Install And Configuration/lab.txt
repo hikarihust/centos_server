@@ -1,0 +1,28 @@
+Centos 8 install php multi version
+
+1. Add remi repository
+dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+2. Remi install
+dnf -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
+3. List php version
+dnf module list php
+
+4. Install php 8.1
+dnf module install -y php:remi-7.3
+dnf module install -y php:remi-7.4
+
+
+5. Other package install
+dnf install --enablerepo=remi php-mysqlnd
+dnf install --enablerepo=remi php-gd
+dnf install --enablerepo=remi php-xmlrpc
+dnf install --enablerepo=remi php-pecl-mcrypt
+dnf install --enablerepo=remi php-opcache
+dnf install --enablerepo=remi php-pecl-apcu
+dnf install --enablerepo=remi php-pecl-zip
+dnf install --enablerepo=remi php-pear
+
+6. Module mail install
+pear install -a Mail
